@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       let users = [];
+
+       function showData() {
+           console.log('showData triggered');  // To see if the function is being called
+
+           let name = document.getElementById("name").value;
+           let email = document.getElementById("email").value;
+
+           // Create a new user object and push it to the users array
+           let user = {
+               name: name,
+               email: email
+           };
+
+           users.push(user);
+
+           console.log('Updated users array:', users);  // Log after the user is added
+
+           // Create a string to display all users as a list
+           let str = "";
+           for (let i = 0; i < users.length; i++) {
+               str += `<li>${users[i].name} - ${users[i].email}</li>`;
+           }
+
+           // Display the list of users in the data element
+           let dataElement = document.getElementById("data");
+           if (dataElement) {
+               dataElement.innerHTML = `<ul>${str}</ul>`;  // Wrap the list with <ul> for proper formatting
+           } else {
+               console.error("Element with ID 'data' not found!");
+           }
+       }
+    </script>
+</head>
+<body>
+    <h1>Login Form</h1>
+    <p> <input type="text" id="name" placeholder="Enter Name"></p>
+    <p> <input type="text" id="email" placeholder="Enter Email Address"></p>
+    <button onclick="showData()">Login</button>
+    <hr/>
+    <div id="data">
+        <!-- User data will appear here -->
+    </div>
+</body>
+</html>

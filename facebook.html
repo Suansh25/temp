@@ -7,7 +7,13 @@
     <link rel="stylesheet" href="facebook.css">
     <script>
         function showData(){
-            alert("Hello World!")
+            //alert("Hello World!")
+            let name = document.getElementById("name").value
+            let email = document.getElementById("email").value
+            let password = document.getElementById("password").value
+            let dob = document.getElementById("dob").value
+            //data.innerHTML = name + "," + email + "," + password + "," + dob
+            data.innerHTML =`${name},${email},${password},${dob}`
         }
 
     </script>
@@ -20,7 +26,9 @@
     <p> <input type="datetime-local" id="dob"></p>
     <button onclick="showData()">Register</button>
     <hr/>
-    <div id="data"></div>
+    <div id="data">
+        
+    </div>
     
 </body>
 </html>

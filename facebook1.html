@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="facebook.css">
+    <script>
+        // function showData(){
+        //     //alert("Hello World!")
+        //     let name = document.getElementById("name").value
+        //     let email = document.getElementById("email").value
+        //     let password = document.getElementById("password").value
+        //     let dob = document.getElementById("dob").value
+        //     //data.innerHTML = name + "," + email + "," + password + "," + dob
+        //     data.innerHTML =`${name},${email},${password},${dob}`
+        // }
+        // let student ={
+        //     name:"Cathy",
+        //     no :'23'
+        // }
+        // let i =1
+        // while(i<5){
+        //     console.log(i)
+        //     i = i+1
+        // }
+        // console.log(student.name)
+        // console.log("Hello world")
+        // let a =10
+        // let b =12
+        // if (a>b){
+        //     console.log(`${a} is bigger`)
+        // }
+        // else{
+        //     console.log(`${b} is bigger`)
+        // }
+        // for(let i=1;i<=5;i++){
+        //     console.log(i)
+        // }
+        // let vegetables=["carrot","tomato","brinjal"]
+        // vegetables.map((value)=>{
+        //     console.log(value)
+        // })
+        // let names=["John","Doe"]
+        //     names.push("Mike")
+        // console.log(names)
+        function showData(){
+            let name = document.getElementById("name").value
+            let email = document.getElementById("email").value
+            data.innerHTML=`${name},${email}`
+            // let data1=[]
+            // data1.push("name")
+            // console.log(data1)
+            // if (name == "john" && email =="1234"){
+            //     data.innerHTML = "Welcome Jhon"
+               
+
+            // }
+            // else{
+            //     data.innerHTML = "Access Denied" 
+            // }
+            
+        }
+
+
+    </script>
+</head>
+<body>
+    <h1>Login Form</h1>
+    <p> <input type="text" id="name" placeholder="Enter Name"></p>
+    <p> <input type="text" id="email" placeholder="Enter Email Address"></p>
+    <button onclick="showData()">Login</button>
+    <hr/>
+    <div id="data">
+        
+    </div>
+    
+</body>
+</html>
