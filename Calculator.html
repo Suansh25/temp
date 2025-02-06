@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showData(){
+            let no1 = Number(document.getElementById("no1").value)
+            let no2 = Number(document.getElementById("no2").value)
+            document.getElementById("data").innerHTML = `
+            The sum of the two numbers is: ${no1 + no2} <br>
+            The subtraction of the two numbers is: ${no1 - no2} <br>
+            The product of the two numbers is: ${no1 * no2} <br>
+            The division of the two numbers is: ${no1 / no2}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <p> <input type="text" id="no1" placeholder="Enter 1st Number"></p>
+    <p> <input type="text" id="no2" placeholder="Enter 2nd Number"></p>
+    <button onclick="showData()">Click for Calculations!</button>
+    <hr/>
+    <div id="data">
+        
+    </div>
+</body>
+</html>
