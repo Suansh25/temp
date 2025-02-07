@@ -10,9 +10,12 @@
             let str = `
             <div>
                 <h1>This is a login form</h1>
-                <p><input type="text"></p>
-                <p><input type="password"></p>
-                <button>Log In </button>
+                <div id="msg"></div>
+                <p><input type="text" id="name" placeholder="Name"></p>
+                <p><input type="password" id ="password" placeholder="Password"></p>
+                <p><input type="e-mail" id ="email" placeholder="email"></p>
+                <p> <input type="datetime-local" id="dob"></p>
+                <button onclick = "hello()">Log In </button>
                 <br><br>
                 <button onclick = "showForm()"> Create Account </button>
             </div>
@@ -20,20 +23,43 @@
             `
             root.innerHTML = str;
         }
+        function hello(){
+            let str = `
+            <h1> Welcome</h1>
+            <button onclick = "showlogin()"> Log Out</button>
+            `
+            root.innerHTML = str;
+        }
         function showForm() {
             let str1 = `
             <div>
                 <h1>Registration form</h1>
-                <p><input type="text"></p>
-                <p><input type="password"></p>
-                <button>Submit </button>
-                <p>Already a member?</p>
+                <p><input type="text" id="name" placeholder="Name"></p>
+                <p><input type="password" id ="password" placeholder="Password"></p>
+                <p><input type="e-mail" id ="email" placeholder="email"></p>
                 <p> <input type="datetime-local" id="dob"></p>
+                <button onclick = "storeData()">Submit</button>
+                <p>Already a member?</p>
                 <button onclick = "showlogin()">Login button</button>
+                
                 
             </div>`
             root.innerHTML = str1;
 
+        }
+        let users = [];
+        function storeData(){
+            let name = document.getElementById("name").value;
+            let password = document.getElementById("password").value;
+            let dob = document.getElementById("dob").value;
+            let user = {
+                name:name,
+                email:email,
+                password:password,
+                dob:dob
+            }
+            users.push(user)
+            showlogin();
         }
     </script>
 </head>
