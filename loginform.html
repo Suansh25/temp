@@ -24,11 +24,20 @@
             root.innerHTML = str;
         }
         function hello(){
-            let str = `
-            <h1> Welcome</h1>
-            <button onclick = "showlogin()"> Log Out</button>
-            `
-            root.innerHTML = str;
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            for(let i=0;i<users.length;i++){
+                if(users[i].email == email && users[i].password == password){
+                    home();
+                    break;
+                }
+                else{
+                    root.innerHTML = "Access Denied";
+                }
+            }
+            
+            
         }
         function showForm() {
             let str1 = `
@@ -48,8 +57,16 @@
 
         }
         let users = [];
+        function home(){
+            let str = `
+                        <h1> Welcome</h1>
+                        <button onclick = "showlogin()"> Log Out</button>`;
+                        root.innerHTML = str;
+
+        }
         function storeData(){
             let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
             let password = document.getElementById("password").value;
             let dob = document.getElementById("dob").value;
             let user = {
