@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let products = ["apple","carrot","pineapple"];
+        // products.forEach((v,i,a)=>
+        // {
+        //     console.log(v,i,a)
+
+        // })
+        let score = [32,12,42,35];
+        // let newscr= [];
+//use of for each keyword in accessing values in an array ,it gives values,index ,array.
+        // score.forEach((value)=>{
+        //     newscr.push(value+5)
+        // });
+        // console.log(newscr)
+// use of map function for applying formula to all the elements in the array ,similar to python's map
+
+        // let newscr = score.map((value,index) =>{
+        //     return value +5;
+        // });
+        // console.log(newscr);
+// filter function helps in filtering the values of the array
+        // let newscr = score.filter((value,index) =>{
+        //     return value > 15;
+        // });
+        // console.log(newscr);
+//similar to filter but gives only one value. it is used on array whic have unique values.      
+        let newscr = score.find((value,index) =>{
+            return value > 15;
+        });
+        console.log(newscr);
+    </script>
+</body>
+</html>

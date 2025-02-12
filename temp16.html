@@ -26,7 +26,9 @@
               }
             }
             else if(type=="3"){
-                
+                users[i+1].balance += amount;
+                spBalance.innerHTML= "Amount added to someone";
+                break;
             }
             spBalance.innerHTML = users[i].balance;
             break
@@ -34,6 +36,11 @@
           
         }
         
+      }
+      function options(){
+        for(let i=0;i<users.length;i++){
+          spBalance.innerHTML = username[i]
+        }
       }
       function home() {
         let str = `
@@ -46,7 +53,9 @@
                <option value=2>Withdraw</option>
                <option value=3>Transfer</option>
                </select></p>
-               <p><select id="selUser"></select></p>
+               <p><select id="selUser">
+                    options();
+                </select></p>
                 <p><input type="number" id ="amount" placeholder="enter value"></p>
                <button onclick='saveData()'>Submit</button>
                <p>Current Balance: <span id='spBalance'>${currBalance}</span></p>

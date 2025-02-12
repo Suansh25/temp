@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const products = [
+            { id: 1, name: "P1", price: 34 },
+            { id: 2, name: "P2", price: 35 },
+            { id: 3, name: "P3", price: 36 },
+        ];
+        const cart = {};
+
+        const showProducts = () => {
+            let str = "";
+            products.forEach((value) => {
+                str += `<div>Id: ${value.id}, Name: ${value.name}, Price: $${value.price}, <button onclick = "add(${value.id})">Add to Cart</button></div>`;          
+            });
+
+            // Correct way to update the div
+            document.getElementById("divProducts").innerHTML = str;
+        };
+        const add = (id) => {
+            const test ={}
+            test["john"] = 45,
+            test["Sam"] = 89
+            console.log(test);
+           
+        }
+
+        // Call function after page loads
+        window.onload = showProducts;
+    </script>
+</head>
+<body>
+    <h1>My Store</h1>
+    <hr>
+    <h3>Products</h3>
+    <div id="divProducts"></div>
+    <h3>My Cart</h3>
+</body>
+</html>
