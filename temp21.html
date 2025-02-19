@@ -1,55 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        html, body {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f2f5; /* Facebook-like background */
-}
+        html,
+        body {
 
-.container {
-    background-color: white; /* White background for the form */
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center;
-    justify-content: center;
-    width: 400px;
-    height: 600px;
-    border-radius: 10px; /* Smooth corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    padding: 20px;
-    gap: 15px; /* Spacing between elements */
-}
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f2f5;
 
+        }
+
+        .container {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+            justify-content: center;
+            width: 400px;
+            height: 600px;
+            border-radius: 10px;
+
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+            padding: 20px;
+
+        }
+
+
+        input,
+        select {
+            color: grey;
+            border-radius: 5px;
+            margin: 5px;
+            border: 1px solid gray;
+        }
+
+        radio {
+            border-radius: 5px black;
+        }
+
+        #title {
+            display: flex;
+            flex-direction: column;
+            /* font-style: ; */
+            align-items: center;
+            justify-content: center;
+            color: blue;
+            font-size: 50px;
+        }
+
+        #title2 {
+            display: flex;
+            flex-direction: column;
+            /* Stack elements vertically */
+            align-items: center;
+            justify-content: start;
+
+        }
+
+        #quick {
+            display: flex;
+            color: gray;
+            flex-direction: column;
+            /* Stack elements vertically */
+            align-items: center;
+            justify-content: center;
+        }
+
+        #birth {
+            font-size: 12px;
+            color: gray;
+        }
+
+        .radioclass {
+            border: 1px solid gray;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin: 5px;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        .row {
+            width: 100%;
+            display: flex;
+            gap: 20px;
+            color: gray;
+        }
+
+        abbr {
+            color: green;
+        }
+
+        button {
+            color: white;
+            background-color: green;
+            font-size: 20px;
+            padding: 5px;
+            border-radius: 2px;
+            width: 200px;
+            border: none;
+            margin: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
     </style>
+
 </head>
+
 <body>
-    
-    
+
+
     <div class="container">
-        <h1 id="title">Facebook</h1>
-    <form action="#">
-    <h2 id="title2">Create a new account</h2>
-    <p>Its quick and easy</p>
-    <hr>
-    <input type="text" placeholder="First Name"><input type="text" placeholder="Surname"><br>
-    <p>Date of birth ?</p>
-    <input type="Dropdown" placeholder="Day"><input type="Dropdown" placeholder="Day"><input type="Dropdown" placeholder="Day"><br>
-    <p>Gender ?</p>
-    <input type="radio" id="male"  value="male"><label for="male">Male</label> <input type="radio" id="female"  value="female"><label for="male">Female</label> <input type="radio" id="other"  value="other"><label for="other">Other</label><br>
-    <br>
-    <input type="text" placeholder="Mobile Number or email address"><br>
-    <input type="text" placeholder="New password"><br>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est ut voluptas ullam ducimus beatae minima labore quis impedit distinctio voluptatem!</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, voluptatum? Quae labore obcaecati dolorem aut voluptate nobis sint error delectus!</p>
-    </form>
+        <form>
+            <h1 id="title">Facebook</h1>
+
+            <h2 id="title2">Create a new account</h2>
+            <p id="quick">Its quick and easy.</p>
+            <hr>
+            <input type="text" placeholder="First Name"><input type="text" placeholder="Surname"><br>
+            <p id="birth">Date of birth ?</p><abbr title="?"></abbr>
+            <div class="row">
+                <select name="day" id="day">
+                    <option value="" disabled selected>Select an option</option>
+                </select>
+                <select name="month" id="month">
+                    <option value="" disabled selected>Select an option</option>
+                </select>
+                <select name="day" id="year">
+                    <option value="" disabled selected>Select an option</option>
+                </select>
+            </div>
+            <p id="birth"> Gender<abbr title="?"></abbr></p>
+            <div class="row">
+                <div class="radioclass">
+                    <div><label for="male">Female</label> </div>
+                    <div><input type="radio" id="female" value="female"></div>
+                </div>
+                <div class="radioclass">
+                    <div><label for="male">male</label> </div>
+                    <div><input type="radio" id="male" value="male"></div>
+                </div>
+                <div class="radioclass">
+                    <div><label for="Custom">Custom</label> </div>
+                    <div><input type="radio" id="Custom" value="Custom"></div>
+                </div>
+            </div>
+            <div class="row">
+                <input type="text" placeholder="Mobile Number or email address"><br>
+            </div>
+            <div class="row">
+                <input type="password" placeholder="Password"><br>
+            </div>
+
+
+            <br>
+            <p id="birth"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est ut voluptas ullam ducimus
+                beatae minima
+                labore quis impedit distinctio voluptatem!</p>
+            <p id="birth"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, voluptatum? Quae labore
+                obcaecati
+                dolorem aut voluptate nobis sint error delectus!</p>
+            <button class="signup">Sign up</button>
+        </form>
+
     </div>
+    <script>
+        let str = "";
+        for (let i = 1; i <= 31; i++) {
+            str += `<option>${i}</option>`;
+        }
+        day.innerHTML = str;
+        let str1 = "";
+        for (let i = 1; i <= 12; i++) {
+            str += `<option>${i}</option>`;
+        }
+        month.innerHTML = st1r;
+    </script>
 </body>
+
 </html>
