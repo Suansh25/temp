@@ -104,7 +104,7 @@
         const months =[ "jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec"];
       const showData = () => {
         let gender =document.getElementsByName("gender");
-        
+
         userData.firstName = document.getElementById("firstname").value;
         userData.lastName = document.getElementById("surname").value;
         userData.day = document.getElementById("day").value;
@@ -131,8 +131,11 @@
             <p><strong>Password:</strong>${userData.pwd}</p>
             <button onclick="editForm()">Edit</button> <button onclick="confirm()"> Confirm </button>
         </div>
-        `;
-        root.innerHTML = str;
+        `;document.getElementById("display").style.display = "block";
+
+// Hide the form section
+// document.getElementById("formSection").style.display = "none";
+//         root.innerHTML = str;
       };
 //       function confirm() {
 //                 userData.firstName = document.getElementById("firstName").value;
@@ -141,20 +144,41 @@
 //                 showForm(); 
 // }
 
-      function editForm() {
-            document.getElementById("firstName").value = userData.firstName;
-            document.getElementById("lastName").value = userData.lastName;
-            document.getElementById("formSection").style.display = "block";  
+    //   function editForm() {
+    //         // document.getElementById("firstname").value = userData.firstName;
+    //         // document.getElementById("surname").value = userData.lastName;
+    //         // document.getElementById("formSection").style.display = "block"; 
             
-}
+    //         document.getElementById("root").innerHTML = originalFormHTML; 
+    //         document.getElementById("firstname").value = userData.firstName;
+    //         document.getElementById("surname").value = userData.lastName;
+    //         let originalFormHTML = ""; // Store the form content globally
+
+    // const showForm = () => {
+    //     let str = `<!-- Form HTML here -->`;
+    //     root.innerHTML = str;
+    //     originalFormHTML = str; 
+    // };
+
+ 
+            
+// }
+//         function updateData() {
+//             // Update the userData object with new values
+//             userData.firstName = document.getElementById("firstname").value;
+//             userData.lastName = document.getElementById("surname").value;
+           
+
+//             // Call showData function to display updated data
+//             showData();
+//         }
+        
 
       const showForm = () => {
         
         let str = `
-      <div id="display" style="display: none;">
-           
-    </div>
-        <div id="formSection">
+     
+        
       <div class="row">
         <input type="text" id="firstname" placeholder="Firstname" />
         <input type="text" id="surname" placeholder="Surname" />
@@ -212,7 +236,7 @@
         <button onclick='showData()'>Sign Up</button>
         
       </div>
-      </div>
+      
       `;
         root.innerHTML = str;
       };
@@ -247,5 +271,10 @@
         }
       };
     </script>
+     <div id="display" style="display: none;">
+           
+     </div>
+     <div id="formSection"></div>
+     <div id="root"></div>
   </body>
 </html>
