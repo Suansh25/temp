@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div id = "text">0</div>
+   <div class="row">
+   <button onclick="increase()">Increase</button> 
+   <button onclick="decrease()">Decrease</button>
+</div>
+<script>
+    let n =0;
+    function increase(){
+        n=Math.random()
+        text.innerHTML = n;
+
+    }
+    function decrease(){
+        if (n>0){
+        n=n-1;
+        text.innerHTML = n;
+        }
+    }
+</script>
+</body>
+</html>
